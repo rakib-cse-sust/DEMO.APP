@@ -1,0 +1,39 @@
+﻿<link href="~/Content/bootstrap.vertical-tabs.min.css" rel="stylesheet" />
+<script src="~/scripts/angular.min.js"></script>
+<script src="~/scripts/angular-ui-router.min.js"></script>
+<script src="~/Modules/Administration/RoleSetup/RoleSetup.module.js"></script>
+<script src="~/Modules/Administration/RoleSetup/controllers/RoleSetupController.js"></script>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="height:50px;"></div>
+
+<div data-ng-app="roleSetupApp" data-ng-controller="roleSetupController as vm" class="row">
+    
+    <h4>Left Tabs</h4>
+
+    <hr />    
+
+    <div class="row">
+
+        <div class="col-xs-2">
+            <ul class="nav nav-tabs tabs-left">
+                <li data-ng-repeat="role in vm.RoleList" ng-class="{'active': role.Id === 1}">
+                    <a href="#{{role.Id}}" data-toggle="tab">{{role.Name}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-xs-10">
+            <div class="tab-content">
+                <div data-ng-repeat="role in vm.RoleList" ng-class="{'active': role.Id === 1}" class="tab-pane" id="{{role.Id}}">{{role.Name}}</div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+    </div>
+
+</div>

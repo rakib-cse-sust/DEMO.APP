@@ -145,6 +145,8 @@
     <Content Include="Modules\Account\Account.module.js" />
     <Content Include="Modules\Account\partials\partial-registration.html" />
     <Content Include="Modules\Account\partials\partial-signin.html" />
+    <Content Include="Modules\Administration\RoleSetup\controllers\RoleSetupController.js" />
+    <Content Include="Modules\Administration\RoleSetup\RoleSetup.module.js" />
     <Content Include="scripts\angular-animate.min.js" />
     <Content Include="scripts\angular-loader.min.js" />
     <Content Include="scripts\angular-message-format.min.js" />
@@ -167,6 +169,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\RoleSetupController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -198,6 +201,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\RoleSetup\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -210,6 +214,7 @@
     <Folder Include="Models\" />
     <Folder Include="Modules\Account\controllers\" />
     <Folder Include="Modules\Account\services\" />
+    <Folder Include="Modules\Administration\RoleSetup\partials\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

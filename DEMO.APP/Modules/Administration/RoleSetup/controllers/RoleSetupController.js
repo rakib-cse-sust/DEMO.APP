@@ -195,6 +195,7 @@
   }
             ];
         }
-        console.log(JSON.stringify(vm.RoleList));
+        //console.log(JSON.stringify(vm.RoleList));
+
     }
 })();

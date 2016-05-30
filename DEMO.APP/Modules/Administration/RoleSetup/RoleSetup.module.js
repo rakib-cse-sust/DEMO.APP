@@ -1,4 +1,4 @@
-﻿var roleSetupApp = angular.module('roleSetupApp', ['ui.router'  ])
+﻿var roleSetupApp = angular.module('roleSetupApp', ['ui.router'])
 
 //.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
 

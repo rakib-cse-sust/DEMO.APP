@@ -160,6 +160,7 @@
     <Content Include="scripts\angular-ui-router.min.js" />
     <Content Include="scripts\angular.min.js" />
     <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="Modules\Common\directives\Checklist-model.js" />
     <Content Include="scripts\jquery-2.2.3.min.js" />
     <Content Include="scripts\jquery.validate.min.js" />
     <Content Include="scripts\jquery.validate.unobtrusive.min.js" />

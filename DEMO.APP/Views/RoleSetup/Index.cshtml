@@ -22,82 +22,78 @@
 
 
     @*<div ng-repeat="visualItem in vm.visualItems">
-        <label for="">{{visualItem.name}}</label>
-        <input type="radio" name="{{visualItem.id}}" ng-model="visualItem.model" ng-value="visualItem.one" />
-        <input type="radio" name="{{visualItem.id}}" ng-model="visualItem.model" ng-value="visualItem.two" />
-        <input type="radio" name="{{visualItem.id}}" ng-model="visualItem.model" ng-value="visualItem.three" />
-    </div>*@
+            <label for="">{{visualItem.name}}</label>
+            <input type="radio" name="{{visualItem.id}}" ng-model="visualItem.model" ng-value="visualItem.one" />
+            <input type="radio" name="{{visualItem.id}}" ng-model="visualItem.model" ng-value="visualItem.two" />
+            <input type="radio" name="{{visualItem.id}}" ng-model="visualItem.model" ng-value="visualItem.three" />
+        </div>*@
 
     <div class="row">
 
-            <div class="col-xs-2" style="padding-right:0px;">
-                <ul class="nav nav-tabs tabs-left">
-                    <li data-ng-repeat="role in vm.RoleList" ng-class="{'active': role.Id === 1}">
-                        <a href="#{{role.Id}}" data-toggle="tab">{{role.Name}}</a>
-                    </li>
-                </ul>
-            </div>
+        <div class="col-xs-2" style="padding-right:0px;">
+            <ul class="nav nav-tabs tabs-left">
+                <li data-ng-repeat="role in vm.RoleList" ng-class="{'active': role.Id === 1}">
+                    <a href="#{{role.Id}}" data-toggle="tab">{{role.Name}}</a>
+                </li>
+            </ul>
+        </div>
 
-            <div class="col-xs-10" style="border-top:1px solid #ddd;margin-top:2px;background:#f5f5f5;" ng-style="{'min-height': (vm.RoleList.length*44)  +'px'}">
-                <div class="tab-content">
-                    <div data-ng-repeat="role in vm.RoleList" ng-class="{'active': role.Id === 1}" class="tab-pane" id="{{role.Id}}">
+        <div class="col-xs-10" style="border-top:1px solid #ddd;margin-top:2px;background:#f5f5f5;" ng-style="{'min-height': (vm.RoleList.length*44)  +'px'}">
+            <div class="tab-content">
+                <div data-ng-repeat="role in vm.RoleList" ng-class="{'active': role.Id === 1}" class="tab-pane" id="{{role.Id}}">
 
-                        <div class="row" style="padding:15px 0px 15px 15px;margin-right:0px;">
+                    <div class="row" style="padding:15px 0px 15px 15px;margin-right:0px;">
 
-                            <div class="card-columns">
-                                <div class="card" data-ng-repeat="module in role.ModuleList">
-                                    <div class="card-block">
+                        <div class="card-columns">
+                            <div class="card" data-ng-repeat="module in role.ModuleList">
+                                <div class="card-block">
 
-                                        <div class="checkbox checkbox-success">
-                                            <input id="checkbox{{module.Id}}" class="styled" type="checkbox">
-                                            <label for="checkbox{{module.Id}}">
-                                                Parent Module {{module.Id}}
-                                            </label>
-                                        </div>
+                                    <div class="checkbox checkbox-success">
+                                        <input id="checkbox{{module.Id}}" class="styled" type="checkbox">
+                                        <label for="checkbox{{module.Id}}">
+                                            Parent Module {{module.Id}}
+                                        </label>
+                                    </div>
 
-                                        <div data-ng-repeat="screen in module.ScreenList">
+                                    <div data-ng-repeat="screen in module.ScreenList">
 
-                                            <div class="row" style="padding-bottom:10px;">
+                                        <div class="row" style="padding-bottom:10px;">
 
-                                                <div class="col-md-6">{{screen.ScreenName}}</div>
-                                                <div class="col-md-6" style="padding:0px">
+                                            <div class="col-md-6">{{screen.ScreenName}}{{screen.model}}</div>
+                                            <div class="col-md-6" style="padding:0px">
 
-                                                    <div class="radio radio-danger radio-inline">
-                                                        <input type="radio" name="{{module.Id}}_{{screen.Id}}" ng-model="screen.model" ng-checked="screen.model == 'N'" ng-value="screen.none" />
-                                                        <label for="inlineRadioN" style="color:#D9534F;">N</label>
-                                                    </div>
-                                                    <div class="radio radio-info radio-inline">
-                                                        <input type="radio" name="{{module.Id}}_{{screen.Id}}" ng-model="screen.model" ng-checked="screen.model == 'R'" ng-value="screen.read" />
-                                                        <label for="inlineRadioR" style="color:#5BC0DE;">R</label>
-                                                    </div>
-                                                    <div class="radio radio-success radio-inline">
-                                                        <input type="radio" name="{{module.Id}}_{{screen.Id}}" ng-model="screen.model" ng-checked="screen.model == 'W'" ng-value="screen.write" />
-                                                        <label for="inlineRadioW" style="color:#5CB85C;">W</label>
-                                                    </div>
-
+                                                <div class="radio radio-danger radio-inline">
+                                                    <input type="radio" name="{{role.Id}}_{{module.Id}}{{screen.Id}}" ng-model="screen.model" ng-checked="screen.model === 'N'" value="N" />
+                                                    <label for="inlineRadioN" style="color:#D9534F;">N</label>
+                                                </div>
+                                                <div class="radio radio-info radio-inline">
+                                                    <input type="radio" name="{{role.Id}}_{{module.Id}}{{screen.Id}}" ng-model="screen.model" ng-checked="screen.model === 'R'" value="R" />
+                                                    <label for="inlineRadioR" style="color:#5BC0DE;">R</label>
+                                                </div>
+                                                <div class="radio radio-success radio-inline">
+                                                    <input type="radio" name="{{role.Id}}_{{module.Id}}{{screen.Id}}" ng-model="screen.model" ng-checked="screen.model === 'W'" value="W" />
+                                                    <label for="inlineRadioW" style="color:#5CB85C;">W</label>
                                                 </div>
 
                                             </div>
 
-                                            @*{{module.Id}}{{screen.Id}}{{screen.model}}*@
-
-                                            @*{{module.Id}}{{screen.Id}}{{screen.model}}*@
-
                                         </div>
 
                                     </div>
+
                                 </div>
                             </div>
-
                         </div>
+
                     </div>
                 </div>
-
-                <div class="clearfix"></div>
-
             </div>
 
+            <div class="clearfix"></div>
+
         </div>
+
+    </div>
 
 
 </div>

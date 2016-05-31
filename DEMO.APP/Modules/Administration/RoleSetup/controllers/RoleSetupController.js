@@ -23,9 +23,7 @@
                             { Id: 1, ScreenName: 'ScreenName11', none: 'N', read: 'R', write: 'W', model: 'N' },
                             { Id: 2, ScreenName: 'ScreenName12', none: 'N', read: 'R', write: 'W', model: 'R' },
                             { Id: 3, ScreenName: 'ScreenName13', none: 'N', read: 'R', write: 'W', model: 'W' },
-                            { Id: 4, ScreenName: 'ScreenName14', none: 'N', read: 'R', write: 'W', model: 'R' },
-                            { Id: 5, ScreenName: 'ScreenName15', none: 'N', read: 'R', write: 'W', model: 'W' },
-                            { Id: 6, ScreenName: 'ScreenName16', none: 'N', read: 'R', write: 'W', model: 'N' }]
+                            { Id: 4, ScreenName: 'ScreenName14', none: 'N', read: 'R', write: 'W', model: 'R' }]
                     }, {
                         Id: 2, ModuleName: 'ModuleName12', ScreenList:
                             [

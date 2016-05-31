@@ -51,7 +51,7 @@
                                         <div class="checkbox checkbox-success">
                                             <input id="checkbox{{module.Id}}" class="styled" type="checkbox">
                                             <label for="checkbox{{module.Id}}">
-                                                Parent Module
+                                                Parent Module {{module.Id}}
                                             </label>
                                         </div>
 
@@ -63,21 +63,23 @@
                                                 <div class="col-md-6" style="padding:0px">
 
                                                     <div class="radio radio-danger radio-inline">
-                                                        <input type="radio" name="{{module.Id}}{{screen.Id}}" ng-model="screen.model" ng-value="screen.none" />
-                                                        <label for="inlineRadioN" style="color:#D9534F;font-weight:bold;"> N </label>
+                                                        <input type="radio" name="{{module.Id}}_{{screen.Id}}" ng-model="screen.model" ng-checked="screen.model == 'N'" ng-value="screen.none" />
+                                                        <label for="inlineRadioN" style="color:#D9534F;">N</label>
                                                     </div>
                                                     <div class="radio radio-info radio-inline">
-                                                        <input type="radio" name="{{module.Id}}{{screen.Id}}" ng-model="screen.model" ng-value="screen.read" />
-                                                        <label for="inlineRadioR" style="color:#5BC0DE;font-weight:bold;"> R </label>
+                                                        <input type="radio" name="{{module.Id}}_{{screen.Id}}" ng-model="screen.model" ng-checked="screen.model == 'R'" ng-value="screen.read" />
+                                                        <label for="inlineRadioR" style="color:#5BC0DE;">R</label>
                                                     </div>
                                                     <div class="radio radio-success radio-inline">
-                                                        <input type="radio" name="{{module.Id}}{{screen.Id}}" ng-model="screen.model" ng-value="screen.write" />
-                                                        <label for="inlineRadioW" style="color:#5CB85C;font-weight:bold;"> W </label>
+                                                        <input type="radio" name="{{module.Id}}_{{screen.Id}}" ng-model="screen.model" ng-checked="screen.model == 'W'" ng-value="screen.write" />
+                                                        <label for="inlineRadioW" style="color:#5CB85C;">W</label>
                                                     </div>
 
                                                 </div>
 
                                             </div>
+
+                                            @*{{module.Id}}{{screen.Id}}{{screen.model}}*@
 
                                             @*{{module.Id}}{{screen.Id}}{{screen.model}}*@
 

@@ -20,59 +20,82 @@
 
     <hr />
 
+
+    @*<div ng-repeat="visualItem in vm.visualItems">
+        <label for="">{{visualItem.name}}</label>
+        <input type="radio" name="{{visualItem.id}}" ng-model="visualItem.model" ng-value="visualItem.one" />
+        <input type="radio" name="{{visualItem.id}}" ng-model="visualItem.model" ng-value="visualItem.two" />
+        <input type="radio" name="{{visualItem.id}}" ng-model="visualItem.model" ng-value="visualItem.three" />
+    </div>*@
+
     <div class="row">
 
-        <div class="col-xs-2" style="padding-right:0px;">
-            <ul class="nav nav-tabs tabs-left">
-                <li data-ng-repeat="role in vm.RoleList" ng-class="{'active': role.Id === 1}">
-                    <a href="#{{role.Id}}" data-toggle="tab">{{role.Name}}</a>
-                </li>
-            </ul>
-        </div>
+            <div class="col-xs-2" style="padding-right:0px;">
+                <ul class="nav nav-tabs tabs-left">
+                    <li data-ng-repeat="role in vm.RoleList" ng-class="{'active': role.Id === 1}">
+                        <a href="#{{role.Id}}" data-toggle="tab">{{role.Name}}</a>
+                    </li>
+                </ul>
+            </div>
 
-        <div class="col-xs-10" style="border-top:1px solid #ddd;margin-top:2px;background:#f5f5f5;" ng-style="{'min-height': (vm.RoleList.length*44)  +'px'}">
-            <div class="tab-content">
-                <div data-ng-repeat="role in vm.RoleList" ng-class="{'active': role.Id === 1}" class="tab-pane" id="{{role.Id}}">
+            <div class="col-xs-10" style="border-top:1px solid #ddd;margin-top:2px;background:#f5f5f5;" ng-style="{'min-height': (vm.RoleList.length*44)  +'px'}">
+                <div class="tab-content">
+                    <div data-ng-repeat="role in vm.RoleList" ng-class="{'active': role.Id === 1}" class="tab-pane" id="{{role.Id}}">
 
-                    <div class="row" style="padding:15px 0px 15px 15px;margin-right:0px;">
+                        <div class="row" style="padding:15px 0px 15px 15px;margin-right:0px;">
 
-                        <div class="card-columns">
-                            <div class="card" data-ng-repeat="module in role.ModuleList">
-                                <div class="card-block">
-                                    <div class="checkbox checkbox-success">
-                                        <input id="checkbox{{module.Id}}" class="styled" type="checkbox">
-                                        <label for="checkbox{{module.Id}}">
-                                            Parent Module
-                                        </label>
-                                    </div>
+                            <div class="card-columns">
+                                <div class="card" data-ng-repeat="module in role.ModuleList">
+                                    <div class="card-block">
 
-                                    <div data-ng-repeat="screen in module.ScreenList" class="card-text">
-                                        {{screen.ScreenName}}
-
-                                        <div class="radio radio-info radio-inline">
-                                            <label for="inlineRadio1">N</label>
-                                            <input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked>                                            
+                                        <div class="checkbox checkbox-success">
+                                            <input id="checkbox{{module.Id}}" class="styled" type="checkbox">
+                                            <label for="checkbox{{module.Id}}">
+                                                Parent Module
+                                            </label>
                                         </div>
-                                        <div class="radio radio-inline">
-                                            <label for="inlineRadio1">R</label>
-                                            <input type="radio" id="inlineRadio2" value="option2" name="radioInline" checked>                                            
+
+                                        <div data-ng-repeat="screen in module.ScreenList">
+
+                                            <div class="row" style="padding-bottom:10px;">
+
+                                                <div class="col-md-6">{{screen.ScreenName}}</div>
+                                                <div class="col-md-6" style="padding:0px">
+
+                                                    <div class="radio radio-danger radio-inline">
+                                                        <input type="radio" name="{{module.Id}}{{screen.Id}}" ng-model="screen.model" ng-value="screen.none" />
+                                                        <label for="inlineRadioN" style="color:#D9534F;font-weight:bold;"> N </label>
+                                                    </div>
+                                                    <div class="radio radio-info radio-inline">
+                                                        <input type="radio" name="{{module.Id}}{{screen.Id}}" ng-model="screen.model" ng-value="screen.read" />
+                                                        <label for="inlineRadioR" style="color:#5BC0DE;font-weight:bold;"> R </label>
+                                                    </div>
+                                                    <div class="radio radio-success radio-inline">
+                                                        <input type="radio" name="{{module.Id}}{{screen.Id}}" ng-model="screen.model" ng-value="screen.write" />
+                                                        <label for="inlineRadioW" style="color:#5CB85C;font-weight:bold;"> W </label>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            @*{{module.Id}}{{screen.Id}}{{screen.model}}*@
+
                                         </div>
-                                        <div class="radio radio-inline">
-                                            <label for="inlineRadio1">W</label>
-                                            <input type="radio" id="inlineRadio3" value="option3" name="radioInline" checked>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="clearfix"></div>
+                <div class="clearfix"></div>
+
+            </div>
 
         </div>
 
-    </div>
+
 </div>

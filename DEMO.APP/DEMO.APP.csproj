@@ -205,6 +205,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\Dashboard\Index.cshtml" />
     <Content Include="Views\RoleSetup\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\demo.app.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

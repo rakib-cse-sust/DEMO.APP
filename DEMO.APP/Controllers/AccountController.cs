@@ -13,11 +13,13 @@ namespace DEMO.APP.Controllers
         //[ValidateAntiForgeryAngular]
         public ActionResult Signin(FormCollection fc)
         {
+            Session["IsAuthenticated"] = true;
             return RedirectToAction("Index", "Dashboard");
         }
 
         public ActionResult Signout()
         {
+            Session["IsAuthenticated"] = false;
             return RedirectToAction("Index");
         }
 

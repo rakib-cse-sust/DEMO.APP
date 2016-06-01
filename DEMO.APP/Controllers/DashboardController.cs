@@ -11,7 +11,6 @@ namespace DEMO.APP.Controllers
         // GET: Dashboard
         public ActionResult Index()
         {
-            ViewBag.IsValidLogin = true;
             return View();
         }
     }

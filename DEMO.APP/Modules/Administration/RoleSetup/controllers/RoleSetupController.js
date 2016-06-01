@@ -57,10 +57,73 @@
             }
 
                 , {
-                    Id: 2, Name: 'Admin developer'
+                    Id: 2, Name: 'Admin developer', ModuleList: [{
+                        Id: 1, ModuleName: 'ModuleName11', ScreenList:
+                            [
+                                { Id: 2, ScreenName: 'ScreenName12', model: 'R' }
+                            ]
+                    }]
                 }
                 , {
                     Id: 3, Name: 'Admin manager'
+                    , ModuleList: [{
+                        Id: 1, ModuleName: 'ModuleName11', ScreenList:
+                            [
+                                { Id: 1, ScreenName: 'ScreenName11', model: 'N' },
+                                { Id: 2, ScreenName: 'ScreenName12', model: 'R' }
+                            ]
+                    }]
+                }, {
+                    Id: 4, Name: 'Developer', ModuleList: [{
+                        Id: 1, ModuleName: 'ModuleName11', ScreenList:
+                            [
+                                { Id: 2, ScreenName: 'ScreenName12', model: 'R' }
+                            ]
+                    }]
+                }
+                , {
+                    Id: 5, Name: 'Manager'
+                    , ModuleList: [{
+                        Id: 1, ModuleName: 'ModuleName11', ScreenList:
+                            [
+                                { Id: 1, ScreenName: 'ScreenName11', model: 'N' },
+                                { Id: 2, ScreenName: 'ScreenName12', model: 'R' }
+                            ]
+                    }]
+                }, {
+                    Id: 6, Name: 'Admin developer 111', ModuleList: [{
+                        Id: 1, ModuleName: 'ModuleName11', ScreenList:
+                            [
+                                { Id: 2, ScreenName: 'ScreenName12', model: 'R' }
+                            ]
+                    }]
+                }
+                , {
+                    Id: 7, Name: 'Admin manager 222'
+                    , ModuleList: [{
+                        Id: 1, ModuleName: 'ModuleName11', ScreenList:
+                            [
+                                { Id: 1, ScreenName: 'ScreenName11', model: 'N' },
+                                { Id: 2, ScreenName: 'ScreenName12', model: 'R' }
+                            ]
+                    }]
+                }, {
+                    Id: 8, Name: 'Admin developer 333', ModuleList: [{
+                        Id: 1, ModuleName: 'ModuleName11', ScreenList:
+                            [
+                                { Id: 2, ScreenName: 'ScreenName12', model: 'R' }
+                            ]
+                    }]
+                }
+                , {
+                    Id: 9, Name: 'Admin manager 444'
+                    , ModuleList: [{
+                        Id: 1, ModuleName: 'ModuleName11', ScreenList:
+                            [
+                                { Id: 1, ScreenName: 'ScreenName11', model: 'N' },
+                                { Id: 2, ScreenName: 'ScreenName12', model: 'R' }
+                            ]
+                    }]
                 }
 
             ];

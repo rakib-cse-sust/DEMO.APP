@@ -1,4 +1,4 @@
-﻿<link href="~/Content/bootstrap4.card.css" rel="stylesheet" />
+﻿<link href="~/Content/masonary-style.css" rel="stylesheet" />
 <link href="~/Content/bootstrap.vertical-tabs.min.css" rel="stylesheet" />
 <script src="~/scripts/angular.min.js"></script>
 <script src="~/scripts/angular-ui-router.min.js"></script>
@@ -37,37 +37,33 @@
 
                     <div class="row" style="padding:15px 0px 15px 15px;margin-right:0px;">
 
-                        <div class="card-columns">
+                        <div class="masonry">
 
-                            <div class="card card-block" data-ng-repeat="module in role.ModuleList">
+                            <div class="item" data-ng-repeat="module in role.ModuleList">
 
-                                <div class="checkbox checkbox-success card-title">
+                                <div class="checkbox checkbox-success">
                                     <input id="checkbox{{module.Id}}" class="styled" type="checkbox">
                                     <label for="checkbox{{module.Id}}">
                                         Parent Module {{module.Id}}
                                     </label>
                                 </div>
 
-                                <div class="card-text" data-ng-repeat="screen in module.ScreenList">
+                                <div class="row" style="padding-bottom:10px;" data-ng-repeat="screen in module.ScreenList">
 
-                                    <div class="row" style="padding-bottom:10px;">
-
-                                        <div class="col-sm-6">{{screen.ScreenName}}{{screen.model}}</div>
-                                        <div class="col-sm-6">
-                                            <label class="radio-inline" title="No termission">
-                                                <input type="radio" ng-model="screen.model" value="N" />
-                                                <i class="fa fa-ban" aria-hidden="true" style="color:#D9534F;"></i>
-                                            </label>
-                                            <label class="radio-inline" title="Read termission">
-                                                <input type="radio" ng-model="screen.model" value="R" />
-                                                <i class="fa fa-eye" aria-hidden="true" style="color:#5BC0DE;"></i>
-                                            </label>
-                                            <label class="radio-inline" title="Write termission">
-                                                <input type="radio" ng-model="screen.model" value="W" />
-                                                <i class="fa fa-pencil-square-o" aria-hidden="true" style="color:#5CB85C;"></i>
-                                            </label>
-                                        </div>
-
+                                    <div class="col-sm-6">{{screen.ScreenName}}{{screen.model}}</div>
+                                    <div class="col-sm-6">
+                                        <label class="radio-inline" title="No termission">
+                                            <input type="radio" ng-model="screen.model" value="N" />
+                                            <i class="fa fa-ban" aria-hidden="true" style="color:#D9534F;"></i>
+                                        </label>
+                                        <label class="radio-inline" title="Read termission">
+                                            <input type="radio" ng-model="screen.model" value="R" />
+                                            <i class="fa fa-eye" aria-hidden="true" style="color:#5BC0DE;"></i>
+                                        </label>
+                                        <label class="radio-inline" title="Write termission">
+                                            <input type="radio" ng-model="screen.model" value="W" />
+                                            <i class="fa fa-pencil-square-o" aria-hidden="true" style="color:#5CB85C;"></i>
+                                        </label>
                                     </div>
 
                                 </div>
@@ -75,6 +71,7 @@
                             </div>
 
                         </div>
+
                     </div>
                 </div>
 
@@ -86,3 +83,5 @@
 
 
     </div>
+
+</div>

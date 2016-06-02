@@ -12,19 +12,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<style>
-    @@media (max-width: 544px) {
-        .card-columns {
-            -webkit-column-count: 1;
-            -moz-column-count: 1;
-            column-count: 1;
-            -webkit-column-gap: 1.25rem;
-            -moz-column-gap: 1.25rem;
-            column-gap: 1.25rem;
-        }
-    }
-</style>
-
 <div style="height:20px;"></div>
 
 <div data-ng-app="roleSetupApp" data-ng-controller="roleSetupController as vm" class="row">
@@ -51,45 +38,45 @@
                     <div class="row" style="padding:15px 0px 15px 15px;margin-right:0px;">
 
                         <div class="card-columns">
-                            <div class="card" data-ng-repeat="module in role.ModuleList">
-                                <div class="card-block">
 
-                                    <div class="checkbox checkbox-success">
-                                        <input id="checkbox{{module.Id}}" class="styled" type="checkbox">
-                                        <label for="checkbox{{module.Id}}">
-                                            Parent Module {{module.Id}}
-                                        </label>
-                                    </div>
+                            <div class="card card-block" data-ng-repeat="module in role.ModuleList">
 
-                                    <div data-ng-repeat="screen in module.ScreenList">
+                                <div class="checkbox checkbox-success card-title">
+                                    <input id="checkbox{{module.Id}}" class="styled" type="checkbox">
+                                    <label for="checkbox{{module.Id}}">
+                                        Parent Module {{module.Id}}
+                                    </label>
+                                </div>
 
-                                        <div class="row" style="padding-bottom:10px;">
+                                <div class="card-text" data-ng-repeat="screen in module.ScreenList">
 
-                                            <div class="col-sm-6">{{screen.ScreenName}}{{screen.model}}</div>
+                                    <div class="row" style="padding-bottom:10px;">
 
-                                            <div class="col-sm-6">
+                                        <div class="col-sm-6">{{screen.ScreenName}}{{screen.model}}</div>
 
-                                                <label class="radio-inline" title="No termission">
-                                                    <input type="radio" ng-model="screen.model" value="N" />
-                                                    <i class="fa fa-ban" aria-hidden="true" style="color:#D9534F;"></i>
-                                                </label>
-                                                <label class="radio-inline" title="Read termission">
-                                                    <input type="radio" ng-model="screen.model" value="R" />
-                                                    <i class="fa fa-eye" aria-hidden="true" style="color:#5BC0DE;"></i>
-                                                </label>
-                                                <label class="radio-inline" title="Write termission">
-                                                    <input type="radio" ng-model="screen.model" value="W" />
-                                                    <i class="fa fa-pencil-square-o" aria-hidden="true" style="color:#5CB85C;"></i>
-                                                </label>
+                                        <div class="col-sm-6">
 
-                                            </div>
+                                            <label class="radio-inline" title="No termission">
+                                                <input type="radio" ng-model="screen.model" value="N" />
+                                                <i class="fa fa-ban" aria-hidden="true" style="color:#D9534F;"></i>
+                                            </label>
+                                            <label class="radio-inline" title="Read termission">
+                                                <input type="radio" ng-model="screen.model" value="R" />
+                                                <i class="fa fa-eye" aria-hidden="true" style="color:#5BC0DE;"></i>
+                                            </label>
+                                            <label class="radio-inline" title="Write termission">
+                                                <input type="radio" ng-model="screen.model" value="W" />
+                                                <i class="fa fa-pencil-square-o" aria-hidden="true" style="color:#5CB85C;"></i>
+                                            </label>
 
                                         </div>
 
                                     </div>
 
                                 </div>
+
                             </div>
+
                         </div>
 
                     </div>

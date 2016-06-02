@@ -28,7 +28,8 @@ display: block;
     padding: 0;
     -moz-column-gap: 1.5em;
     -webkit-column-gap: 1.5em;
-    column-gap: 1.5em;
+    /*column-gap: 1.5em;*/
+    column-gap:15px;
     /*font-size: .85em;*/
 }
 
@@ -37,7 +38,8 @@ display: block;
     background: #fff;
     /*padding: 1.5em;*/
     padding:10px;
-    margin: 0 0 1.5em;
+    /*margin: 0 0 1.5em;*/
+    margin:0 0 15px 0;
     width: 100%;
     box-sizing: border-box;
     -moz-box-sizing: border-box;

@@ -73,17 +73,42 @@
             padding: 3px 15px !important;
         }
     }
+
+    #searchInput{       
+        float:right;
+        width:130px;
+        -webkit-transition:width 0.3s ease-in-out;
+    }
+    #searchInput:focus	{
+        -webkit-box-shadow: none;
+    	outline: -webkit-focus-ring-color auto 0px;
+        width:300px;
+        -webkit-transition:width 0.5s ease-in-out;
+    }
+
 </style>
 
 @if (Session["IsAuthenticated"] != null && (bool)Session["IsAuthenticated"] == true)
 {
     <nav class="navbar navbar-inverse" style="margin-top:11px;border-radius:0px;background-color:#444d58;border:0px;">
         <div class="container">
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
 
+            <div class="navbar-header" style="padding-top:5px;">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarMenu" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div id="navbarMenu" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
                     <li class="dropdown dropdown-large">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dashboard <i class="fa fa-home" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="dropdown dropdown-large">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <i class="fa fa-chevron-circle-down" aria-hidden="true"></i></a>
                         <ul class="dropdown-menu dropdown-menu-large row">
                             <li class="col-sm-3">
                                 <ul>
@@ -140,10 +165,20 @@
                                 </ul>
                             </li>
                         </ul>
-
                     </li>
-
                 </ul>
+                
+                <div class="nav navbar-nav navbar-right">
+                    <form style="float:right;padding-top:2px;" class="navbar-form" role="search">
+                        <div class="input-group input-group-sm">
+                            <input  id="searchInput" type="text" class="form-control" placeholder="Search" name="q" style="background:#4E5966;border:#4E5966">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit" style="background:#4E5966;border:#4E5966"><i class="glyphicon glyphicon-search"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
             </div>
         </div>
     </nav>

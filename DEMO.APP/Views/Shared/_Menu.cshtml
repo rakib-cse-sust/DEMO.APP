@@ -1,4 +1,5 @@
-﻿<link href="~/Content/menu.css" rel="stylesheet" />
+﻿<link href="~/Content/navbar-inverse-hack.css" rel="stylesheet" />
+<link href="~/Content/menu.css" rel="stylesheet" />
 
 @if (Session["IsAuthenticated"] != null && (bool)Session["IsAuthenticated"] == true)
 {
@@ -16,10 +17,7 @@
 
             <div id="navbarMenu" class="collapse navbar-collapse" style="padding-right:0px;padding-left:0px">
                 <ul class="nav navbar-nav">
-                    @*<li class="dropdown dropdown-large active">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dashboard <i class="fa fa-home" aria-hidden="true"></i></a>
-                    </li>*@
-                    <li><a href="#" style="background:rgba(16, 14, 14, 0.12);">Dashboard <i class="fa fa-home" aria-hidden="true"></i></a></li>
+                    <li><a href="#" style="background:rgba(16, 14, 14, 0.12);">Dashboard <i class="fa fa-tachometer" aria-hidden="true"></i></a></li>
                     <li class="dropdown dropdown-large">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <i class="fa fa-chevron-circle-down" aria-hidden="true"></i></a>
                         <ul class="dropdown-menu dropdown-menu-large row">
@@ -84,7 +82,7 @@
                 <div class="nav navbar-nav navbar-right">
                     <form style="float:right;padding-top:2px;" class="navbar-form" role="search">
                         <div class="input-group input-group-sm">
-                            <input  id="searchInput" type="text" class="form-control" placeholder="Search" name="q" style="background:#4E5966;border:#4E5966">
+                            <input  id="searchInput-nav" type="text" class="form-control" placeholder="Search" name="q" style="background:#4E5966;border:#4E5966">
                             <div class="input-group-btn">
                                 <button class="btn btn-default" type="submit" style="background:#4E5966;border:#4E5966"><i class="glyphicon glyphicon-search"></i></button>
                             </div>

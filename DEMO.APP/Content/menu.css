@@ -73,14 +73,15 @@
         }
     }
 
-    #searchInput{       
+    #searchInput-nav{       
         float:right;
-        width:130px;
+        width:140px;
         -webkit-transition:width 0.3s ease-in-out;
     }
-    #searchInput:focus	{
+    
+    #searchInput-nav:focus	{
         -webkit-box-shadow: none;
     	outline: -webkit-focus-ring-color auto 0px;
-        width:300px;
+        width:280px;
         -webkit-transition:width 0.5s ease-in-out;
     }

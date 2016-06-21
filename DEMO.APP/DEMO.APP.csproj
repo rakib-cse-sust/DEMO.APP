@@ -141,6 +141,7 @@
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\masonary-style.css" />
     <Content Include="Content\menu.css" />
+    <Content Include="Content\navbar-inverse-hack.css" />
     <Content Include="Content\portlet.card.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />

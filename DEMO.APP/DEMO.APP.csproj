@@ -172,6 +172,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\AntiForgeryExtension.cs" />
+    <Compile Include="App_Start\NoCacheAttribute.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\SessionExpireCheck.cs" />
     <Compile Include="App_Start\ValidateAntiForgeryAngular.cs" />

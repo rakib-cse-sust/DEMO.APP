@@ -5,6 +5,7 @@ namespace DEMO.APP.Controllers
 {
     public class AccountController : Controller
     {
+        [NoCache]
         public ActionResult Index()
         {
             return View();

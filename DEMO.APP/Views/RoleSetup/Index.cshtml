@@ -1,5 +1,7 @@
-﻿<link href="~/Content/masonary-style.css" rel="stylesheet" />
+﻿<link href="~/Content/portlet.card.css" rel="stylesheet" />
+<link href="~/Content/masonary-style.css" rel="stylesheet" />
 <link href="~/Content/bootstrap.vertical-tabs.min.css" rel="stylesheet" />
+
 <script src="~/scripts/angular.min.js"></script>
 <script src="~/scripts/angular-ui-router.min.js"></script>
 
@@ -12,7 +14,109 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div data-ng-app="roleSetupApp" data-ng-controller="roleSetupController as vm" class="row">
+
+<div class="row" data-ng-app="roleSetupApp" data-ng-controller="roleSetupController as vm">
+
+    <div class="col-md-12">
+        <!-- BEGIN Portlet PORTLET-->
+        <div class="portlet">
+            <div class="portlet-title">
+                <div class="caption caption-green">
+                    <i class="fa fa-tachometer" style="position:relative;bottom:1px;"></i>
+                    <span class="caption-subject text-uppercase"> Role Setup</span>
+                    <span class="caption-helper">monthly stats...</span>
+                </div>
+                @*<div class="actions">
+                    <a href="javascript:;" class="btn btn-red btn-circle active">
+                        <i class="glyphicon glyphicon-paperclip"></i>
+                    </a>
+                    <a href="javascript:;" class="btn btn-red btn-circle">
+                        <i class="glyphicon glyphicon-pencil"></i>
+                    </a>
+                    <a href="javascript:;" class="btn btn-red btn-circle">
+                        <i class="glyphicon glyphicon-trash"></i>
+                    </a>
+                    <a href="javascript:;" class="btn btn-red btn-circle">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </a>
+                </div>*@
+            </div>
+            <div class="portlet-body">              
+
+                <div class="row">
+
+                    <div class="col-xs-2" style="padding-right:0px;">
+                        <ul class="nav nav-tabs tabs-left">
+                            <li data-ng-repeat="role in vm.RoleList" ng-class="{'active': role.Id === 1}">
+                                <a href="#{{role.Id}}" data-toggle="tab">{{role.Name}}</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="col-xs-10" style="border-top:1px solid #ddd;margin-top:2px;background:#f5f5f5;" ng-style="{'min-height': (vm.RoleList.length*44)  +'px'}">
+                        <div class="tab-content">
+                            <div data-ng-repeat="role in vm.RoleList" ng-class="{'active': role.Id === 1}" class="tab-pane" id="{{role.Id}}">
+
+                                <div class="row" style="padding:15px 0px 15px 15px;margin-right:0px;">
+
+                                    <div class="masonry">
+
+                                        <div class="item" data-ng-repeat="module in role.ModuleList">
+
+                                            <div class="checkbox checkbox-success" style="margin-top:5px;">
+                                                <input id="checkbox{{module.Id}}" class="styled" type="checkbox">
+                                                <label for="checkbox{{module.Id}}">
+                                                    Parent Module {{module.Id}}
+                                                </label>
+                                            </div>
+
+                                            <div class="row" style="padding-bottom:10px;margin-left:0px;" data-ng-repeat="screen in module.ScreenList">
+
+                                                <div class="col-sm-6" style="padding-left:0px;">{{screen.ScreenName}}{{screen.model}}</div>
+                                                <div class="col-sm-6" style="padding-left:0px;">
+                                                    <label class="radio-inline" title="No termission">
+                                                        <input type="radio" ng-model="screen.model" value="N" />
+                                                        <i class="fa fa-ban" aria-hidden="true" style="color:#D9534F;"></i>
+                                                    </label>
+                                                    <label class="radio-inline" title="Read termission">
+                                                        <input type="radio" ng-model="screen.model" value="R" />
+                                                        <i class="fa fa-eye" aria-hidden="true" style="color:#5BC0DE;"></i>
+                                                    </label>
+                                                    <label class="radio-inline" title="Write termission">
+                                                        <input type="radio" ng-model="screen.model" value="W" />
+                                                        <i class="fa fa-pencil-square-o" aria-hidden="true" style="color:#5CB85C;"></i>
+                                                    </label>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="clearfix"></div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+        </div>
+        <!-- END Portlet PORTLET-->
+    </div>
+
+</div>
+
+@*<div data-ng-app="roleSetupApp" data-ng-controller="roleSetupController as vm" class="row">
 
     <h4>Role Setup</h4>
 
@@ -82,4 +186,4 @@
 
     </div>
 
-</div>
+</div>*@

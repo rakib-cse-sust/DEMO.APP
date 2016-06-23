@@ -19,7 +19,7 @@ namespace DEMO.APP.App_Start
                 base.OnResultExecuting(filterContext);
             }
             else
-                filterContext.HttpContext.Response.Redirect("~/Dashboard/Index");
+                filterContext.HttpContext.Response.Redirect("~/Dashboard");
         }
     }
 }

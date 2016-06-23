@@ -21,7 +21,7 @@ namespace DEMO.APP.Controllers
 
         public ActionResult Signout()
         {
-            Session["IsAuthenticated"] = false;
+            Session["IsAuthenticated"] = null;
             return RedirectToAction("Index");
         }
 

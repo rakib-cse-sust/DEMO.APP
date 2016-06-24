@@ -1,4 +1,28 @@
-﻿@if (Session["IsAuthenticated"] != null && (bool)Session["IsAuthenticated"] == true)
+﻿<style>
+    .dropdown-menu::before {
+        border-bottom: 8px solid rgba(0, 0, 0, 0.2);
+        border-left: 9px solid rgba(0, 0, 0, 0);
+        border-right: 9px solid rgba(0, 0, 0, 0);
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: -8px;
+        right: 9px;
+    }
+
+    .dropdown-menu::after {
+        border-bottom: 8px solid #FFFFFF;
+        border-left: 9px solid rgba(0, 0, 0, 0);
+        border-right: 9px solid rgba(0, 0, 0, 0);
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: -7px;
+        right: 9px;
+    }
+</style>
+
+@if (Session["IsAuthenticated"] != null && (bool)Session["IsAuthenticated"] == true)
 {
     <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right" style="margin-right:0px;">

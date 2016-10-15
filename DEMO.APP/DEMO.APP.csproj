@@ -139,6 +139,7 @@
     <Content Include="Content\fancy-checkbox-radio.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\isotope-animation.css" />
     <Content Include="Content\masonary-style.css" />
     <Content Include="Content\menu.css" />
     <Content Include="Content\navbar-inverse-hack.css" />
@@ -152,6 +153,10 @@
     <Content Include="Modules\Account\partials\partial-signin.html" />
     <Content Include="Modules\Administration\RoleSetup\controllers\RoleSetupController.js" />
     <Content Include="Modules\Administration\RoleSetup\RoleSetup.module.js" />
+    <Content Include="Modules\Isotope\controllers\IsotopeController.js" />
+    <Content Include="Modules\Isotope\directives\IsotopeDirective.js" />
+    <Content Include="Modules\Isotope\Isotope.module.js" />
+    <Content Include="Modules\Isotope\partials\IsotopeGallery.html" />
     <Content Include="scripts\angular-animate.min.js" />
     <Content Include="scripts\angular-loader.min.js" />
     <Content Include="scripts\angular-message-format.min.js" />
@@ -164,6 +169,7 @@
     <Content Include="scripts\angular.min.js" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="Modules\Common\directives\Checklist-model.js" />
+    <Content Include="scripts\isotope.pkgd.min.js" />
     <Content Include="scripts\jquery-2.2.3.min.js" />
     <Content Include="scripts\jquery.validate.min.js" />
     <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
@@ -215,6 +221,7 @@
     <Content Include="Views\RoleSetup\Index.cshtml" />
     <None Include="Properties\PublishProfiles\demo.app.pubxml" />
     <Content Include="Views\Shared\_Menu.cshtml" />
+    <Content Include="Views\Dashboard\Isotope.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -227,6 +234,7 @@
     <Folder Include="Modules\Account\controllers\" />
     <Folder Include="Modules\Account\services\" />
     <Folder Include="Modules\Administration\RoleSetup\partials\" />
+    <Folder Include="Modules\Isotope\services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

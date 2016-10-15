@@ -1,0 +1,67 @@
+﻿@*<link href="~/Content/isotope-animation.css" rel="stylesheet" />*@
+
+<script src="~/scripts/jquery-2.2.3.min.js"></script>
+<script src="~/scripts/angular.min.js"></script>
+<script src="~/scripts/isotope.pkgd.min.js"></script>
+
+<script src="~/Modules/Isotope/Isotope.module.js"></script>
+<script src="~/Modules/Isotope/controllers/IsotopeController.js"></script>
+<script src="~/Modules/Isotope/directives/IsotopeDirective.js"></script>
+
+<style type="text/css">
+
+    #ImagesDiv {
+        font-size: 12px;
+    }
+
+    .inner-container {
+        vertical-align: middle;
+        float: left;
+        margin-bottom: 10px;
+    }
+
+    .centered-content {
+        display: inline-block;
+        background: #f5f5f5;
+        padding: 10px;
+        border: 1px solid #dadada;
+        position: relative;
+        width: 210px;
+    }
+
+    img {
+        max-width: 190px;
+    }
+
+    .col-md-9 {
+        width: 70% !important;
+    }
+
+    .progress {
+        border-radius: 0px;
+    }
+
+    .inner-container img {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: block;
+        width: auto;
+        height: auto;
+        margin: auto;
+    }
+
+</style>
+
+
+@{
+    ViewBag.Title = "Isotope";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row" data-ng-app="isotopeApp" data-ng-controller="IsotopeController as vm" style="height:440px;overflow:auto;margin-left: 0px;">
+
+    <section data-iso-repeat="vm.imageItems"></section>
+
+</div>

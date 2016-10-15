@@ -1,0 +1,1 @@
+﻿var isotopeApp = angular.module('isotopeApp', []);
